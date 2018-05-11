@@ -6,9 +6,9 @@ RUN apt-get update && \
 	 rm -rf /var/lib/apt/lists/*
 	 
 RUN apt-get update && \
-	 apt-get -y install php5.6-ldap && \
+	 apt-get -y install php7.2-ldap && \
 	 rm -rf /var/lib/apt/lists/*
 	 
-RUN ln -sfn /usr/bin/php5.6 /etc/alternatives/php	 
+RUN ln -sfn /usr/bin/php7.2 /etc/alternatives/php	 
 
 CMD ["/run.sh"]
