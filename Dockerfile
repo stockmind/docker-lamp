@@ -6,7 +6,7 @@ RUN apt-get update && \
 	 rm -rf /var/lib/apt/lists/*
 	 
 RUN apt-get update && \
-	 apt-get -y install php7.2-common php7.2-xml php7.2-ldap && \
+	 apt-get -y install php7.2-common php7.2-mbstring php7.2-xml php7.2-ldap && \
 	 rm -rf /var/lib/apt/lists/*
 	 
 RUN ln -sfn /usr/bin/php7.2 /etc/alternatives/php	 
