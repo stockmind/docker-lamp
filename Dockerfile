@@ -11,6 +11,7 @@ RUN apt-get update && \
 	 
 RUN ln -sfn /usr/bin/php7.2 /etc/alternatives/php
 
+RUN a2dismod php5.6
 RUN a2enmod php7.2
 RUN service apache2 restart
 
