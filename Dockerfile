@@ -9,6 +9,9 @@ RUN apt-get update && \
 	 apt-get -y install php7.2-common php7.2-mbstring php7.2-xml php7.2-ldap libapache2-mod-php7.2 && \
 	 rm -rf /var/lib/apt/lists/*
 	 
-RUN ln -sfn /usr/bin/php7.2 /etc/alternatives/php	 
+RUN ln -sfn /usr/bin/php7.2 /etc/alternatives/php
+
+RUN a2enmod php7.2
+RUN service apache2 restart
 
 CMD ["/run.sh"]
